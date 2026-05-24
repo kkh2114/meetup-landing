@@ -9,7 +9,7 @@ import { Moment } from "@/components/sections/Moment";
 
 export default function Home() {
   return (
-    <main className="w-full max-w-full overflow-x-hidden">
+    <main className="relative w-full max-w-full overflow-x-hidden">
       <Nav />
       <Hero />
       <Curriculum />
