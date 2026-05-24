@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 import { useReveal } from "@/lib/useReveal";
 import { COMMON, INSTRUCTORS, EVENT } from "@/lib/curriculum";
-import { ScheduleTable } from "@/components/ScheduleTable";
+import { ScheduleTable, ScheduleMobile } from "@/components/ScheduleTable";
 
 export function Curriculum() {
   const root = useRef<HTMLElement>(null);
@@ -218,12 +218,16 @@ export function Curriculum() {
               <span aria-hidden>↓</span> 강의안 PDF 다운로드
             </button>
           </div>
-          <div className="overflow-x-auto rounded-2xl border border-line">
+          {/* 데스크탑: 표 / 모바일: 스택 카드 */}
+          <div className="hidden overflow-x-auto rounded-2xl border border-line md:block">
             <div className="min-w-[860px]">
               <ScheduleTable variant="screen" />
             </div>
           </div>
-          <p className="mt-3 text-xs text-faint">
+          <div className="md:hidden">
+            <ScheduleMobile />
+          </div>
+          <p className="mt-4 text-xs text-faint">
             ※ PDF는 가로(A4) 양식으로 저장됩니다. 다운로드 창에서 “PDF로 저장”을
             선택하세요.
           </p>

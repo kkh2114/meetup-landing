@@ -38,7 +38,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>{children}</body>
+      <body className="break-keep break-words">{children}</body>
     </html>
   );
 }

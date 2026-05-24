@@ -87,11 +87,11 @@ export function Hero() {
             <br /> 백문이 불여 일견 —{" "}
             <span className="text-paper">하루 만에 직접 보세요.</span>
           </p>
-          <div className="mt-2 flex items-center gap-4 text-sm text-paper">
+          <div className="mt-2 flex flex-col items-center gap-1.5 text-sm text-paper sm:flex-row sm:gap-4">
             <span className="eng tracking-widest text-gold">
               {EVENT.dateLabel}
             </span>
-            <span className="h-3 w-px bg-line" />
+            <span className="hidden h-3 w-px bg-line sm:block" />
             <span className="text-muted">{EVENT.timeLabel}</span>
           </div>
         </div>

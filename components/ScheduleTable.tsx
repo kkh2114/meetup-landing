@@ -2,6 +2,59 @@ import { SCHEDULE } from "@/lib/curriculum";
 
 const COLS = ["시간", "강사", "강의명", "강의 내용", "수강 후 얻는 것", "사전 준비"];
 
+/** 모바일용 — 시간 블록별 스택 카드 (가로 스크롤 없음) */
+export function ScheduleMobile() {
+  return (
+    <div className="space-y-6">
+      {SCHEDULE.map((block) => {
+        if (block.lunch) {
+          return (
+            <div
+              key={block.time}
+              className="rounded-xl border border-line bg-surface/40 px-4 py-3 text-center text-sm text-faint"
+            >
+              <span className="eng text-gold">{block.time}</span> · 점심 시간
+            </div>
+          );
+        }
+        return (
+          <div key={block.time}>
+            <div className="mb-3 inline-flex rounded-full border border-line bg-surface-2 px-3.5 py-1.5">
+              <span className="eng text-sm font-semibold text-gold">
+                {block.time}
+              </span>
+            </div>
+            <div className="space-y-2.5">
+              {(block.rows ?? []).map((r, i) => (
+                <div
+                  key={i}
+                  className="rounded-xl border border-line bg-base p-4"
+                >
+                  <span className="inline-block rounded-full bg-surface-2 px-2.5 py-1 text-xs font-bold text-gold">
+                    {r.instructor}
+                  </span>
+                  <p className="mt-2.5 font-semibold text-paper">{r.title}</p>
+                  {r.detail && (
+                    <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                      {r.detail}
+                    </p>
+                  )}
+                  {r.gain && r.gain !== "—" && (
+                    <p className="mt-2.5 text-sm text-gold">얻는 것 · {r.gain}</p>
+                  )}
+                  {r.prep && r.prep !== "—" && (
+                    <p className="mt-1.5 text-xs text-faint">준비 · {r.prep}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 export function ScheduleTable({
   variant = "screen",
 }: {
