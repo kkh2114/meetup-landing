@@ -137,7 +137,7 @@ export const INSTRUCTORS: Instructor[] = [
   },
   {
     id: "yuni",
-    name: "유니 (Yuni)",
+    name: "유니 (Youni)",
     role: "AI 실무 교육 · Copilot 기반 업무 혁신 전문가",
     cell: "Cell 1 — 입문",
     cellTag: "입문 · 지형 읽기",
