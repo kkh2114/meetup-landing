@@ -11,13 +11,12 @@ export const EVENT = {
   networking: "네트워킹 08:30~",
   audience: "경영자 · 경영자급 리더",
   nature: "비공개 밋업",
-  venue: "세이플랜트",
-  venueDesc: "8호선 문정역 연결 · 테라타워 A동 1321호",
-  address: "서울 송파구 송파대로 167 테라타워 A동 1321호",
-  // 좌표(37.4846615, 127.12093364) 기준 — 도로명+건물명으로 네이버 지도 검색
+  venue: "주식회사 청밀",
+  venueDesc: "가락동 업무동 9층 16호",
+  address: "서울시 송파구 양재대로 932 업무동 9층 16호",
   mapUrl:
     "https://map.naver.com/p/search/" +
-    encodeURIComponent("서울특별시 송파구 송파대로 167 테라타워"),
+    encodeURIComponent("서울시 송파구 양재대로 932 주식회사 청밀"),
   applyUrl: "https://classmap-tan.vercel.app/apply",
 };
 

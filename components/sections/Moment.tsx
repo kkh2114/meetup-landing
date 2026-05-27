@@ -14,7 +14,7 @@ const ICS = [
   "DTSTART:20260530T000000Z",
   "DTEND:20260530T090000Z",
   "SUMMARY:경영자의 AI 밋업",
-  "LOCATION:세이플랜트 (서울 송파구 송파대로 167 테라타워 A동 1321호)",
+  "LOCATION:주식회사 청밀 (서울시 송파구 양재대로 932 업무동 9층 16호)",
   "DESCRIPTION:백문이 불여 일견 — 경영자를 위한 비공개 AI 밋업",
   "END:VEVENT",
   "END:VCALENDAR",
