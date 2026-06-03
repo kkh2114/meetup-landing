@@ -43,7 +43,7 @@ export function Hero() {
     <section
       id="top"
       ref={root}
-      className="gold-wash relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-6 text-center"
+      className="gold-wash relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-6 pb-16 pt-28 text-center sm:py-20"
     >
       {/* ambient */}
       <div className="hero-glow pointer-events-none absolute left-1/2 top-1/2 h-[80vh] w-[80vh] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(212,175,55,0.16),transparent_60%)] opacity-30 blur-3xl" />
